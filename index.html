@@ -72,9 +72,26 @@
         }
         .skill-item { 
             background: #f1f5f9; 
-            padding: 20px; 
+            padding: 0; 
             border-radius: 8px; 
             border-left: 4px solid var(--secondary); 
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .skill-img-box {
+            height: 130px;
+            width: 100%;
+            background-color: #cbd5e1;
+            overflow: hidden;
+        }
+        .skill-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .skill-text-box {
+            padding: 15px 20px 20px 20px;
         }
         .skill-item strong {
             display: block;
@@ -156,7 +173,6 @@
         <p style="font-size: 1.2rem; margin-bottom: 15px;">Étudiant à l'Université Félix Houphouët-Boigny</p>
         <p style="font-style: italic; color: #cbd5e1; margin-bottom: 20px;">Passionné par les sciences industrielles (Agroalimentaire), les sciences de gestion et le numérique.</p>
         
-        <!-- LES FILIÈRES SUPERPOSÉES AVEC LES CARREAUX BLEUS -->
         <div class="filiere-line">🟦 Biochimie et Sciences des Aliments (Agroalimentaire)</div>
         <div class="filiere-line">🟦 MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises)</div>
     </header>
@@ -167,84 +183,76 @@
             <p>Ce portfolio numérique met en valeur ma double compétence unique. Alliant la rigueur des sciences de laboratoire en Biochimie et Sciences des Aliments à la puissance des technologies de gestion de la MIAGE, je me positionne comme un profil polyvalent capable de piloter des projets numériques et d'analyser des données complexes au sein des industries modernes.</p>
         </section>
 
-        <!-- BLOC DE COMPÉTENCES INFORMATIQUES (MIAGE - 2 CASES) -->
+        <!-- BLOC DE COMPÉTENCES INFORMATIQUES (MIAGE - 2 CASES AVEC IMAGES) -->
         <section id="competences-miage">
             <h2>🛠️ Compétences Informatiques & Numériques (MIAGE)</h2>
             <div class="skills-grid">
                 <div class="skill-item">
-                    <strong>📊 Data Analysis</strong>
-                    <ul>
-                        <li>SQL (Requêtes complexes)</li>
-                        <li>Python (Pandas, Manipulation)</li>
-                        <li>Statistiques décisionnelles</li>
-                    </ul>
+                    <div class="skill-img-box">
+                        <img src="projet-data.jpg" alt="Data Analysis" onerror="this.src='https://placeholder.com'">
+                    </div>
+                    <div class="skill-text-box">
+                        <strong>📊 Data Analysis</strong>
+                        <ul>
+                            <li>SQL (Requêtes complexes)</li>
+                            <li>Python (Pandas, Manipulation)</li>
+                            <li>Statistiques décisionnelles</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="skill-item">
-                    <strong>💻 Développement Web</strong>
-                    <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript</li>
-                        <li>Création d'interfaces modernes</li>
-                    </ul>
+                    <div class="skill-img-box">
+                        <img src="projet-web.jpg" alt="Développement Web" onerror="this.src='https://placeholder.com'">
+                    </div>
+                    <div class="skill-text-box">
+                        <strong>💻 Développement Web</strong>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Création d'interfaces modernes</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- BLOC DE COMPÉTENCES SCIENTIFIQUES (BIOCHIMIE - 3 CASES) -->
+        <!-- BLOC DE COMPÉTENCES SCIENTIFIQUES (BIOCHIMIE - 3 CASES AVEC IMAGES DÉDIÉES) -->
         <section id="competences-biochimie">
             <h2>🧬 Expertise Biochimie & Sciences des Aliments</h2>
             <div class="skills-grid">
+                <!-- Case 1 : Dosages -->
                 <div class="skill-item">
-                    <strong>🧪 Compétences Biochimiques</strong>
-                    <ul>
-                        <li>Méthodes de dosage en agroalimentaire (spectrophotométrie)</li>
-                        <li>Contrôle analytique des matières premières et produits finis</li>
-                        <li>Caractérisation physico-chimique (acidité, humidité)</li>
-                    </ul>
-                </div>
-                <div class="skill-item">
-                    <strong>🧫 Microbiologie Appliquée</strong>
-                    <ul>
-                        <li>Techniques d'isolement et de dénombrement</li>
-                        <li>Contrôle de la qualité microbiologique sur les chaînes</li>
-                        <li>Prévention des risques de contamination industrielle</li>
-                    </ul>
-                </div>
-                <div class="skill-item">
-                    <strong>📋 Normes de l'Agroalimentaire</strong>
-                    <ul>
-                        <li>Maîtrise complète de la méthode HACCP</li>
-                        <li>Application des réglementations de sécurité (ISO 22000)</li>
-                        <li>Gestion de la traçabilité et des systèmes qualité</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION DES REALISATIONS AVEC VOS 3 IMAGES EN DIRECT -->
-        <section id="projets">
-            <h2>📁 Mes Réalisations & Projets</h2>
-            <div class="projects-grid">
-                
-                <!-- Projet 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="projet-data.jpg" alt="Analyse de données" onerror="this.src='https://placeholder.com'">
+                    <div class="skill-img-box">
+                        <img src="bio-dosage.jpg" alt="Dosages Biochimiques" onerror="this.src='https://placeholder.com'">
                     </div>
-                    <div class="project-content">
-                        <h3>Analyse de Données Stratégiques</h3>
-                        <p>Extraction, traitement et valorisation de données à l'aide de scripts SQL et de modélisations adaptées aux processus métiers.</p>
-                        <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Data Analysis</span></div>
-                        <a href="https://github.com" target="_blank" class="btn-project">Voir sur GitHub ➔</a>
+                    <div class="skill-text-box">
+                        <strong>🧪 Compétences Biochimiques</strong>
+                        <ul>
+                            <li>Méthodes de dosage en agroalimentaire (spectrophotométrie)</li>
+                            <li>Contrôle analytique des matières premières et produits finis</li>
+                            <li>Caractérisation physico-chimique (acidité, humidité)</li>
+                        </ul>
                     </div>
                 </div>
-
-                <!-- Projet 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="projet-web.jpg" alt="Développement Web" onerror="this.src='https://placeholder.com'">
+                <!-- Case 2 : Microbiologie -->
+                <div class="skill-item">
+                    <div class="skill-img-box">
+                        <img src="bio-microbio.jpg" alt="Microbiologie" onerror="this.src='https://placeholder.com'">
                     </div>
-                    <div class="project-content">
-                        <h3>Application Web de Gestion</h3>
-                        <p>Conception d'une interface web dynamique et interactive pour la gestion et le suivi des processus de l'entreprise.</p>
-                        <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+                    <div class="skill-text-box">
+                        <strong>🧫 Microbiologie Appliquée</strong>
+                        <ul>
+                            <li>Techniques d'isolement et de dénombrement</li>
+                            <li>Contrôle de la qualité microbiologique sur les chaînes</li>
+                            <li>Prévention des risques de contamination industrielle</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Case 3 : Normes HACCP -->
+                <div class="skill-item">
+                    <div class="skill-img-box">
+                        <img src="bio-normes.jpg" alt="Normes Agroalimentaires" onerror="this.src='https://placeholder.com'">
+                    </div>
+                    <div class="skill-text-box">
+                        <strong>📋 Normes de l'Agroalimentaire</strong>
+                        <ul>
