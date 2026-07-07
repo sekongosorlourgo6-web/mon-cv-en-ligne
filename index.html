@@ -4,53 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - SÉKONGO SOLOURGO</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root { 
+            --primary: #1e3a8a; 
+            --secondary: #2563eb; 
+            --text: #334155; 
+            --bg: #f8fafc; 
+            --card-bg: #ffffff; 
+        }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            margin: 0; 
+            background-color: var(--bg); 
+            color: var(--text); 
+            line-height: 1.6; 
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+        }
+        header { 
+            text-align: center; 
+            background: linear-gradient(135deg, var(--primary), var(--secondary)); 
+            color: white; 
+            padding: 60px 20px; 
+            border-radius: 0 0 20px 20px; 
+        }
+        .profile-img { 
+            width: 140px; 
+            height: 140px; 
+            border-radius: 50%; 
+            border: 4px solid white; 
+            object-fit: cover; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        section { 
+            background: var(--card-bg); 
+            padding: 30px; 
+            margin-top: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+        section h2 { 
+            color: var(--primary); 
+            border-bottom: 3px solid var(--secondary); 
+            display: inline-block; 
+            padding-bottom: 5px;
+        }
+        .skills-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 20px; 
+        }
+        .skill-item { 
+            background: #f1f5f9; 
+            padding: 15px; 
+            border-radius: 8px; 
+            border-left: 4px solid var(--secondary); 
+        }
+        .projects-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            margin-top: 20px;
+        }
+        .project-card { 
+            background: var(--card-bg); 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        .project-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15); 
+        }
+        .project-image {
+            height: 180px;
+            overflow: hidden;
+            background-color: #e2e8f0;
+        }
+        .project-image img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+        .project-content { 
+            padding: 20px; 
+        }
+        .tags { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 5px; 
+            margin: 15px 0; 
+        }
+        .tag { 
+            background: #eff6ff; 
+            color: var(--secondary); 
+            padding: 4px 10px; 
+            border-radius: 20px; 
+            font-size: 0.8rem; 
+            font-weight: bold;
+        }
+        .btn-project { 
+            display: inline-block;
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin-top: 10px;
+        }
+        .btn-project:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <!-- Votre photo de profil GitHub s'affichera ici -->
-        <img src="https://github.com" alt="Photo de SÉKONGO SOLOURGO" class="profile-pic">
-        
-        <!-- Votre nom en grands caractères -->
+        <img src="https://github.com" alt="SÉKONGO SOLOURGO" class="profile-img">
         <h1>SÉKONGO SOLOURGO</h1>
-        <p class="subtitle">Étudiant en MIAGE | Data Analyst & Informaticien de gestion</p>
-        <p>📍 Abidjan, Côte d'Ivoire</p>
+        <p>Étudiant en MIAGE | Data Analyst & Informaticien de gestion</p>
     </header>
 
-    <main class="container">
-        <section class="card welcome-card">
+    <div class="container">
+        <section id="a-propos">
             <h2>Bienvenue sur mon espace</h2>
-            <p class="welcome-text">Étudiant en MIAGE, passionné par l'informatique et la gestion, je suis très ravi de vous présenter mon portfolio. Cet espace numérique est dédié à la mise en valeur de mes projets, de mes compétences techniques en tant que Data Analyst et de mon parcours académique d'Informaticien de gestion.</p>
+            <p>Étudiant en MIAGE, passionné par l'informatique de gestion et l'analyse de données. Ce portfolio numérique met en valeur mes compétences et mes projets techniques.</p>
         </section>
 
-        <section class="card">
-            <h2>À propos de mon parcours</h2>
-            <p>La filière MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises) me permet de développer une double compétence unique : concevoir des solutions informatiques performantes tout en occupant un rôle clé de Data Analyst pour extraire, analyser et valoriser les données stratégiques d'une entreprise.</p>
-        </section>
-
-        <section class="card">
+        <section id="competences">
             <h2>Compétences clés</h2>
-            <ul>
-                <li><strong>Informatique de gestion :</strong> Analyse des processus métier, Modélisation (UML/MERISE), Gestion de projets</li>
-                <li><strong>Data Analysis :</strong> Analyse de données, Bases de données (SQL), Statistiques appliquées</li>
-                <li><strong>Développement & Programmation :</strong> HTML5, CSS3, JavaScript, Python</li>
-                <li><strong>Outils technologiques :</strong> Git, GitHub, VS Code</li>
-            </ul>
-        </section>
-
-        <section class="card">
-            <h2>Cursus Académique</h2>
-            <div class="item">
-                <h3>Méthodes Informatiques Appliquées à la Gestion des Entreprises (MIAGE)</h3>
-                <p class="date">En cours d'acquisition</p>
+            <div class="skills-grid">
+                <div class="skill-item"><strong>Data Analysis :</strong> SQL, Python, Statistiques</div>
+                <div class="skill-item"><strong>Développement :</strong> HTML5, CSS3, JavaScript</div>
+                <div class="skill-item"><strong>Gestion :</strong> Modélisation, UML/MERISE</div>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <p>© 2026 - Portfolio Professionnel | SÉKONGO SOLOURGO</p>
-    </footer>
+        <section id="projets">
+            <h2>📁 Mes Réalisations & Projets</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projet-data.jpg" alt="Analyse de données" onerror="this.src='https://placeholder.com'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Analyse de Données Stratégiques</h3>
+                        <p>Extraction, traitement et valorisation de données à l'aide de scripts SQL et de modélisations adaptées.</p>
+                        <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Data Analysis</span></div>
+                        <a href="https://github.com" target="_blank" class="btn-project">Voir sur GitHub ➔</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projet-web.jpg" alt="Développement Web" onerror="this.src='https://placeholder.com'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Application Web de Gestion</h3>
+                        <p>Conception d'une interface web dynamique et interactive pour la gestion des processus métiers.</p>
+                        <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+                        <a href="https://github.com" target="_blank" class="btn-project">Voir sur GitHub ➔</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
 
 </body>
 </html>
