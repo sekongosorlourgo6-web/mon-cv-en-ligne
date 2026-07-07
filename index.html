@@ -117,6 +117,9 @@
             overflow: hidden; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
             transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .project-card:hover { 
             transform: translateY(-8px); 
@@ -138,6 +141,19 @@
         }
         .project-content { 
             padding: 20px; 
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .project-title {
+            margin: 0 0 10px 0;
+            color: var(--primary);
+        }
+        .project-desc {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 15px;
         }
         .tags { 
             display: flex; 
@@ -163,6 +179,11 @@
         .btn-project:hover {
             text-decoration: underline;
         }
+        #loading {
+            text-align: center;
+            color: #64748b;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -179,10 +200,10 @@
     </header>
 
     <div class="container">
-        <!-- ACCUEIL VERSION COURTE ET ACCESSIBLE -->
+        <!-- ACCUEIL SANS FAUTE D'ORTHOGRAPHE -->
         <section id="a-propos">
             <h2>Bienvenue sur mon espace</h2>
-            <p>Bienvenue sur mon portfolio ! Je l'ai créé pour partager mon parcours universitaire et mes projets académiques.</p>
+            <p>Bienvenue sur mon portfolio ! Je l'ai créé pour présenter mon parcours universitaire et mes projets académiques.</p>
         </section>
 
         <!-- BLOC DE COMPÉTENCES INFORMATIQUES (MIAGE - 2 CASES) -->
@@ -218,7 +239,7 @@
             </div>
         </section>
 
-        <!-- BLOC DE COMPÉTENCES SCIENTIFIQUES CORRIGÉ (BIOCHIMIE - 3 CASES) -->
+        <!-- BLOC DE COMPÉTENCES SCIENTIFIQUES (BIOCHIMIE - 3 CASES) -->
         <section id="competences-biochimie">
             <h2>🧬 Connaissances Académiques en Biochimie & Sciences des Aliments</h2>
             <div class="skills-grid">
@@ -250,11 +271,3 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Case 3 : Les Normes de l'Agroalimentaire COMPLÉTÉ -->
-                <div class="skill-item">
-                    <div class="skill-img-box">
-                        <img src="bio-normes.jpg" alt="Les Normes de l'Agroalimentaire" onerror="this.src='https://placeholder.com'">
-                    </div>
-                    <div class="skill-text-box">
-                        <strong>📋 Les Normes de l'Agroalimentaire</strong>
-                        <ul>
