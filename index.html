@@ -35,13 +35,22 @@
         .profile-img { 
             width: 140px; 
             height: 140px; 
-            border-radius: 50% !important; /* Force la photo à rester parfaitement ronde */
+            border-radius: 50% !important; 
             border: 4px solid white; 
             object-fit: cover !important; 
             aspect-ratio: 1 / 1;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             display: block;
             margin: 0 auto 15px auto;
+        }
+        .filiere-line {
+            font-size: 1.1rem;
+            margin: 8px 0;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         section { 
             background: var(--card-bg); 
@@ -58,14 +67,25 @@
         }
         .skills-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             gap: 20px; 
         }
         .skill-item { 
             background: #f1f5f9; 
-            padding: 15px; 
+            padding: 20px; 
             border-radius: 8px; 
             border-left: 4px solid var(--secondary); 
+        }
+        .skill-item strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-size: 1.05rem;
+        }
+        .skill-item ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 0.95rem;
         }
         /* --- GRILLE & ANIMATIONS PROJETS --- */
         .projects-grid { 
@@ -131,28 +151,77 @@
 <body>
 
     <header>
-        <!-- APPEL DE LA PHOTO DE PROFIL DIRECTEMENT SUR LA RACINE -->
         <img src="profil.jpg" alt="SÉKONGO SOLOURGO" class="profile-img">
         <h1>SÉKONGO SOLOURGO</h1>
-        <p>Étudiant en MIAGE | Data Analyst & Informaticien de gestion</p>
+        <p style="font-size: 1.2rem; margin-bottom: 15px;">Étudiant à l'Université Félix Houphouët-Boigny</p>
+        <p style="font-style: italic; color: #cbd5e1; margin-bottom: 20px;">Passionné par les sciences industrielles (Agroalimentaire), les sciences de gestion et le numérique.</p>
+        
+        <!-- LES FILIÈRES SUPERPOSÉES AVEC LES CARREAUX BLEUS -->
+        <div class="filiere-line">🟦 Biochimie et Sciences des Aliments (Agroalimentaire)</div>
+        <div class="filiere-line">🟦 MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises)</div>
     </header>
 
     <div class="container">
         <section id="a-propos">
             <h2>Bienvenue sur mon espace</h2>
-            <p>Étudiant en MIAGE, passionné par l'informatique de gestion et l'analyse de données. Ce portfolio numérique met en valeur mes compétences et mes projets techniques.</p>
+            <p>Ce portfolio numérique met en valeur ma double compétence unique. Alliant la rigueur des sciences de laboratoire en Biochimie et Sciences des Aliments à la puissance des technologies de gestion de la MIAGE, je me positionne comme un profil polyvalent capable de piloter des projets numériques et d'analyser des données complexes au sein des industries modernes.</p>
         </section>
 
-        <section id="competences">
-            <h2>Compétences clés</h2>
+        <!-- BLOC DE COMPÉTENCES INFORMATIQUES (MIAGE - 2 CASES) -->
+        <section id="competences-miage">
+            <h2>🛠️ Compétences Informatiques & Numériques (MIAGE)</h2>
             <div class="skills-grid">
-                <div class="skill-item"><strong>Data Analysis :</strong> SQL, Python, Statistiques</div>
-                <div class="skill-item"><strong>Développement :</strong> HTML5, CSS3, JavaScript</div>
-                <div class="skill-item"><strong>Gestion :</strong> Modélisation, UML/MERISE</div>
+                <div class="skill-item">
+                    <strong>📊 Data Analysis</strong>
+                    <ul>
+                        <li>SQL (Requêtes complexes)</li>
+                        <li>Python (Pandas, Manipulation)</li>
+                        <li>Statistiques décisionnelles</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <strong>💻 Développement Web</strong>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Création d'interfaces modernes</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <!-- SECTION DES REALISATIONS AVEC VOS IMAGES EN DIRECT -->
+        <!-- BLOC DE COMPÉTENCES SCIENTIFIQUES (BIOCHIMIE - 3 CASES) -->
+        <section id="competences-biochimie">
+            <h2>🧬 Expertise Biochimie & Sciences des Aliments</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <strong>🧪 Compétences Biochimiques</strong>
+                    <ul>
+                        <li>Méthodes de dosage en agroalimentaire (spectrophotométrie)</li>
+                        <li>Contrôle analytique des matières premières et produits finis</li>
+                        <li>Caractérisation physico-chimique (acidité, humidité)</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <strong>🧫 Microbiologie Appliquée</strong>
+                    <ul>
+                        <li>Techniques d'isolement et de dénombrement</li>
+                        <li>Contrôle de la qualité microbiologique sur les chaînes</li>
+                        <li>Prévention des risques de contamination industrielle</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <strong>📋 Normes de l'Agroalimentaire</strong>
+                    <ul>
+                        <li>Maîtrise complète de la méthode HACCP</li>
+                        <li>Application des réglementations de sécurité (ISO 22000)</li>
+                        <li>Gestion de la traçabilité et des systèmes qualité</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DES REALISATIONS AVEC VOS 3 IMAGES EN DIRECT -->
         <section id="projets">
             <h2>📁 Mes Réalisations & Projets</h2>
             <div class="projects-grid">
@@ -177,15 +246,5 @@
                     </div>
                     <div class="project-content">
                         <h3>Application Web de Gestion</h3>
-                        <p>Conception d'une interface web dynamique et interactive pour la gestion des données de l'entreprise.</p>
+                        <p>Conception d'une interface web dynamique et interactive pour la gestion et le suivi des processus de l'entreprise.</p>
                         <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
-                        <a href="https://github.com" target="_blank" class="btn-project">Voir sur GitHub ➔</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </div>
-
-</body>
-</html>
