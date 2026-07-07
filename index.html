@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - SÉKONGO SOLOURGO</title>
     <style>
+        /* --- STYLE GÉNÉRAL (CSS MODERNE) --- */
         :root { 
             --primary: #1e3a8a; 
             --secondary: #2563eb; 
@@ -34,10 +35,13 @@
         .profile-img { 
             width: 140px; 
             height: 140px; 
-            border-radius: 50%; 
+            border-radius: 50% !important; /* Force la photo à rester ronde */
             border: 4px solid white; 
-            object-fit: cover; 
+            object-fit: cover !important; 
+            aspect-ratio: 1 / 1;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: block;
+            margin: 0 auto 15px auto;
         }
         section { 
             background: var(--card-bg); 
@@ -63,6 +67,7 @@
             border-radius: 8px; 
             border-left: 4px solid var(--secondary); 
         }
+        /* --- GRILLE & ANIMATIONS PROJETS --- */
         .projects-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -126,7 +131,8 @@
 <body>
 
     <header>
-        <img src="https://github.com" alt="SÉKONGO SOLOURGO" class="profile-img">
+        <!-- LIEN DE VOTRE VRAIE PHOTO DE COMPTE GITHUB EN DIRECT -->
+        <img src="https://githubusercontent.com" alt="SÉKONGO SOLOURGO" class="profile-img">
         <h1>SÉKONGO SOLOURGO</h1>
         <p>Étudiant en MIAGE | Data Analyst & Informaticien de gestion</p>
     </header>
@@ -146,29 +152,32 @@
             </div>
         </section>
 
+        <!-- SECTION DES REALISATIONS DYNAMIQUES -->
         <section id="projets">
             <h2>📁 Mes Réalisations & Projets</h2>
             <div class="projects-grid">
                 
+                <!-- Projet 1 -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="images/projet-data.jpg" alt="Analyse de données" onerror="this.src='https://placeholder.com'">
                     </div>
                     <div class="project-content">
                         <h3>Analyse de Données Stratégiques</h3>
-                        <p>Extraction, traitement et valorisation de données à l'aide de scripts SQL et de modélisations adaptées.</p>
+                        <p>Extraction, traitement et valorisation de données à l'aide de scripts SQL et de modélisations adaptées aux processus métiers.</p>
                         <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Data Analysis</span></div>
                         <a href="https://github.com" target="_blank" class="btn-project">Voir sur GitHub ➔</a>
                     </div>
                 </div>
 
+                <!-- Projet 2 -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="images/projet-web.jpg" alt="Développement Web" onerror="this.src='https://placeholder.com'">
                     </div>
                     <div class="project-content">
                         <h3>Application Web de Gestion</h3>
-                        <p>Conception d'une interface web dynamique et interactive pour la gestion des processus métiers.</p>
+                        <p>Conception d'une interface web dynamique et interactive pour la gestion des données de l'entreprise.</p>
                         <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
                         <a href="https://github.com" target="_blank" class="btn-project">Voir sur GitHub ➔</a>
                     </div>
