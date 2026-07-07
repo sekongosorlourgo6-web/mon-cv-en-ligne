@@ -78,6 +78,7 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
         }
         .skill-img-box {
             height: 130px;
@@ -92,6 +93,10 @@
         }
         .skill-text-box {
             padding: 15px 20px 20px 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .skill-item strong {
             display: block;
@@ -100,9 +105,26 @@
             font-size: 1.05rem;
         }
         .skill-item ul {
-            margin: 0;
+            margin: 0 0 15px 0;
             padding-left: 20px;
             font-size: 0.95rem;
+        }
+        /* --- BOUTON SÉPARÉ DANS LES CASES --- */
+        .btn-skill-git {
+            display: block;
+            text-align: center;
+            background: #0f172a;
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s ease;
+            margin-top: auto;
+        }
+        .btn-skill-git:hover {
+            background: var(--secondary);
         }
         /* --- GRILLE & ANIMATIONS PROJETS --- */
         .projects-grid { 
@@ -206,34 +228,42 @@
             <p>Bienvenue sur mon portfolio ! Je l'ai créé pour présenter mon parcours universitaire et mes projets académiques.</p>
         </section>
 
-        <!-- BLOC DE COMPÉTENCES INFORMATIQUES (MIAGE - 2 CASES) -->
+        <!-- BLOC DE COMPÉTENCES INFORMATIQUES (MIAGE - 2 CASES AVEC BOUTONS GITHUB) -->
         <section id="competences-miage">
             <h2>🛠️ Compétences Informatiques & Numériques (MIAGE)</h2>
             <div class="skills-grid">
+                <!-- Case 1 : Data Analysis -->
                 <div class="skill-item">
                     <div class="skill-img-box">
                         <img src="projet-data.jpg" alt="Data Analysis" onerror="this.src='https://placeholder.com'">
                     </div>
                     <div class="skill-text-box">
-                        <strong>📊 Data Analysis</strong>
-                        <ul>
-                            <li>SQL (Requêtes complexes)</li>
-                            <li>Python (Pandas, Manipulation)</li>
-                            <li>Statistiques décisionnelles</li>
-                        </ul>
+                        <div>
+                            <strong>📊 Data Analysis</strong>
+                            <ul>
+                                <li>SQL (Requêtes complexes)</li>
+                                <li>Python (Pandas, Manipulation)</li>
+                                <li>Statistiques décisionnelles</li>
+                            </ul>
+                        </div>
+                        <a href="https://github.com" target="_blank" class="btn-skill-git">Consulter mes codes MIAGE ➔</a>
                     </div>
                 </div>
+                <!-- Case 2 : Dev Web -->
                 <div class="skill-item">
                     <div class="skill-img-box">
                         <img src="projet-web.jpg" alt="Développement Web" onerror="this.src='https://placeholder.com'">
                     </div>
                     <div class="skill-text-box">
-                        <strong>💻 Développement Web</strong>
-                        <ul>
-                            <li>HTML5 & CSS3</li>
-                            <li>JavaScript</li>
-                            <li>Création d'interfaces modernes</li>
-                        </ul>
+                        <div>
+                            <strong>💻 Développement Web</strong>
+                            <ul>
+                                <li>HTML5 & CSS3</li>
+                                <li>JavaScript</li>
+                                <li>Création d'interfaces modernes</li>
+                            </ul>
+                        </div>
+                        <a href="https://github.com" target="_blank" class="btn-skill-git">Consulter mes codes MIAGE ➔</a>
                     </div>
                 </div>
             </div>
@@ -249,25 +279,3 @@
                         <img src="bio-dosage.jpg" alt="Dosages Biochimiques" onerror="this.src='https://placeholder.com'">
                     </div>
                     <div class="skill-text-box">
-                        <strong>🧪 Compétences Biochimiques</strong>
-                        <ul>
-                            <li>Méthodes de dosage en agroalimentaire (spectrophotométrie)</li>
-                            <li>Contrôle analytique des matières premières et produits finis</li>
-                            <li>Caractérisation physico-chimique (acidité, humidité)</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Case 2 : Microbiologie -->
-                <div class="skill-item">
-                    <div class="skill-img-box">
-                        <img src="bio-microbio.jpg" alt="Microbiologie" onerror="this.src='https://placeholder.com'">
-                    </div>
-                    <div class="skill-text-box">
-                        <strong>🧫 Microbiologie Appliquée</strong>
-                        <ul>
-                            <li>Techniques d'isolement et de dénombrement</li>
-                            <li>Contrôle de la qualité microbiologique sur les chaînes</li>
-                            <li>Prévention des risques de contamination industrielle</li>
-                        </ul>
-                    </div>
-                </div>
